@@ -1,0 +1,35 @@
+{
+  "name": "developing-w/wtrade-api",
+  "description": "Connect module to WTrade",
+  "keywords": ["php", "wtrade", "api"],
+  "homepage": "https://w-develop.com/",
+  "authors": [
+    {
+      "name": "Anton Kalochelitis",
+      "email": "developing.w@gmail.com"
+    }
+  ],
+  "type": "project",
+  "minimum-stability": "stable",
+  "license": "LGPL-3.0+",
+  "version": "0.0.1",
+  "require": {
+    "php": ">=7.1.0"
+  },
+  "require-dev": {
+    "developing-w/core-class": "^0.0.1",
+    "symfony/dotenv": "^5.0.5",
+    "phpunit/phpunit": "^8.1"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "DevelopingW\\WTrade\\Classes\\": "WTrade/Classes"
+    }
+  }
+}
