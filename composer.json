@@ -14,11 +14,11 @@
   "license": "LGPL-3.0+",
   "version": "0.0.1",
   "require": {
-    "php": ">=7.1.0"
+    "php": ">=7.1.0",
+    "symfony/dotenv": "^5.0.5",
+    "developing-w/core-class": "^0.0.1"
   },
   "require-dev": {
-    "developing-w/core-class": "^0.0.1",
-    "symfony/dotenv": "^5.0.5",
     "phpunit/phpunit": "^8.1"
   },
   "repositories": [
