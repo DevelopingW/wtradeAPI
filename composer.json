@@ -12,7 +12,7 @@
   "type": "project",
   "minimum-stability": "stable",
   "license": "LGPL-3.0+",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "require": {
     "php": ">=7.1.0",
     "curl/curl": "^2.2",

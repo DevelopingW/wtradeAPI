@@ -10,6 +10,7 @@ namespace DevelopingW\WTrade\Classes;
 class ApiCommand
 {
     /**
+     * @param string $apiUrl
      * @param string $apiName
      * @param string $apiKey
      * @param string|null $time
@@ -17,6 +18,7 @@ class ApiCommand
      * @return null|string
      */
     public static function getApiDocumentsList(
+        string $apiUrl = '',
         string $apiName = '',
         string $apiKey = '',
         string $time = null
@@ -28,7 +30,7 @@ class ApiCommand
 
         $time = $time ?? date('Y-m-d H:i:s');
 
-        $apiUrl = 'http://wtrade-backend.w-develop.com/api/documents';
+        $apiUrl = $apiUrl.'/api/documents';
 
         return ApiConnect::get()
             ->setApiName($apiName)
@@ -40,6 +42,7 @@ class ApiCommand
 
     /**
      * @param int $docObjId
+     * @param string $apiUrl
      * @param string $apiName
      * @param string $apiKey
      * @param string|null $time
@@ -48,6 +51,7 @@ class ApiCommand
      */
     public static function getApiDocumentProducts(
         int $docObjId = 0,
+        string $apiUrl = '',
         string $apiName = '',
         string $apiKey = '',
         string $time = null
@@ -60,7 +64,7 @@ class ApiCommand
 
         $time = $time ?? date('Y-m-d H:i:s');
 
-        $apiUrl = 'http://wtrade-backend.w-develop.com/api/document';
+        $apiUrl = $apiUrl.'/api/document';
 
         return ApiConnect::get()
             ->setApiName($apiName)
@@ -71,6 +75,7 @@ class ApiCommand
     }
 
     /**
+     * @param string $apiUrl
      * @param string $apiName
      * @param string $apiKey
      * @param string|null $time
@@ -78,6 +83,7 @@ class ApiCommand
      * @return null|string
      */
     public static function getApiCurrencyList(
+        string $apiUrl = '',
         string $apiName = '',
         string $apiKey = '',
         string $time = null
@@ -89,7 +95,7 @@ class ApiCommand
 
         $time = $time ?? date('Y-m-d H:i:s');
 
-        $apiUrl = 'http://wtrade-backend.w-develop.com/api/currency';
+        $apiUrl = $apiUrl.'/api/currency';
 
         return ApiConnect::get()
             ->setApiName($apiName)
@@ -101,6 +107,7 @@ class ApiCommand
 
     /**
      * @param array $currencyCode
+     * @param string $apiUrl
      * @param string $apiName
      * @param string $apiKey
      * @param string|null $time
@@ -109,6 +116,7 @@ class ApiCommand
      */
     public static function getApiCurrencyExchange(
         array $currencyCode = ['USD', 'EUR', 'RUB', 'PLN', 'GBP', 'CHF'],
+        string $apiUrl = '',
         string $apiName = '',
         string $apiKey = '',
         string $time = null)
@@ -120,7 +128,7 @@ class ApiCommand
 
         $time = $time ?? date('Y-m-d H:i:s');
 
-        $apiUrl = 'http://wtrade-backend.w-develop.com/api/currency';
+        $apiUrl = $apiUrl.'/api/currency';
         return ApiConnect::get()
             ->setApiName($apiName)
             ->setApiKey($apiKey)
